@@ -1,4 +1,4 @@
-function addComments(){
+function addValidation(){
     const container = document.createRange().createContextualFragment(`
         
         <div class="container">
@@ -13,7 +13,28 @@ function addComments(){
         const comments = document.getElementById('comments');
         comments.append(container);
 }
-addComments()
+
+addValidation();
+
+function addLista(){
+    const arrLinks = ["index.html", "what-is.html", "why-celebrated.html"]
+    const navArr = ["dos noviembre", "what it's?", "why celebrated it?"]
+    //const navArr = [["index.html","dos noviembre"], ["what-is.html","what it's?"], ["why-celebrated.html","why celebrated it?"]]
+    for(i = 0; i < arrLinks.length; i++){
+        for(j = 0; j < navArr[i].length; i++){
+
+                const li = document.createRange().createContextualFragment(`
+                    
+                        <li><a href="${arrLinks[i]}">${navArr[i]}</a></li>
+        
+                    `)
+                    const lista = document.querySelector('.lista')
+                    lista.append(li)
+            
+            }
+    }
+
+}
 
 const btn_enviar = document.getElementById('btn-enviar')
 const email = document.getElementById('email');
@@ -46,4 +67,5 @@ const emailValido = email => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
 }
 
-btn_enviar.addEventListener("click", validar)
+btn_enviar.addEventListener("click", validar);
+addLista();
