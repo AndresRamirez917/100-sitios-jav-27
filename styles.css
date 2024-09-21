@@ -86,6 +86,14 @@ span {
     color: rgb(255, 0, 191);
 }
 
+::placeholder {
+    font-family: "Font Awesome 5 free";
+    font-weight: 600;
+    content: "\f007";
+    text-align: right;
+
+}
+
 /* mainheader */
 #mainheader {
     background: url("img/background.jpg");

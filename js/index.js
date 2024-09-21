@@ -4,7 +4,7 @@ function addComments(){
         <div class="container">
             <div class="comments-group">
                 <label for="">your Email</label>
-                <input id="email" type="text" class="comments-control"> 
+                <input id="email" type="text" class="comments-control" placeholder=""> 
             </div>
             <button id="btn-enviar" class=".btn button-1">submit</button>
         </div>
